@@ -1,0 +1,86 @@
+/* Reset margin, padding and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+}
+
+/* Container for all components in App */
+.app-container {
+  display: flex;
+  justify-content: space-between;  /* Evenly space out the components */
+  gap: 30px;                      /* Add space between components */
+  padding: 30px;                   /* Padding around the container */
+  flex-wrap: wrap;                 /* Allow components to wrap on smaller screens */
+}
+
+/* Styling for individual components */
+.component-container {
+  display: flex;
+  justify-content: space-between;  /* Align components in a row */
+  gap: 30px;                       /* Space between components */
+  flex-wrap: wrap;                 /* Allow wrapping on small screens */
+  width: 100%;
+}
+
+.statistics, .user-info, .messages {
+  flex: 1;                         /* Each component takes equal width */
+  max-width: 500px;                /* Increase max-width to make components larger */
+  min-width: 400px;                /* Ensure components are not too small */
+  background-color: #fff;          /* White background for components */
+  border-radius: 10px;             /* Rounded corners for a clean look */
+  padding: 40px;                   /* Increased padding inside each component */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Larger shadow for a modern effect */
+  margin: 10px 0;                  /* Margin between components */
+}
+
+.statistics h3, .user-info h3, .messages h3 {
+  color: #333;
+  font-size: 1.8rem;               /* Larger header font size */
+}
+
+.user-info img {
+  border-radius: 50%;
+  width: 150px;                    /* Increase profile image size */
+  height: 150px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 20px;                    /* Increased height for progress bar */
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 5px;
+}
+
+.active-percentage {
+  margin-top: 15px;                /* Increased space between progress bar and percentage */
+  font-size: 1.5rem;               /* Larger font size for percentage */
+  font-weight: bold;
+  text-align: center;
+  color: #2ecc71; /* Default green color */
+}
+
+.active-percentage.red p {
+  color: #e74c3c; /* Red for low percentage */
+}
+
+.active-percentage.yellow p {
+  color: #f39c12; /* Yellow for moderate percentage */
+}
+
+/* Add hover effect for the components */
+.statistics:hover, .user-info:hover, .messages:hover {
+  transform: translateY(-5px); /* Lift the component on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
